@@ -2,7 +2,7 @@
 
 ```
 external_components:
-  - source: https://github.com/rafal83/zmpt101b
+  - source: github://rafal83/zmpt101b
     components: [zmpt101b]
 
 sensor:
