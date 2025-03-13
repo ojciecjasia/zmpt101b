@@ -30,8 +30,6 @@ ZMPT101BSensor = zmpt101b_ns.class_(
     cg.PollingComponent
 )
 
-CONF_ZMPT101B_ID = "ZMPT101B_id"
-
 CONFIG_SCHEMA = (
     sensor.sensor_schema(
         ZMPT101BSensor,
@@ -43,7 +41,6 @@ CONFIG_SCHEMA = (
     )
     .extend(
         {
-            cv.GenerateID(CONF_ZMPT101B_ID): cv.use_id(ZMPT101BSensor),
             cv.Required(CONF_PIN): validate_adc_pin,
             cv.Optional(CONF_FREQUENCY, default=50): cv.int_range(min=40, max=70),
             cv.Optional(CONF_SENSITIVITY, default=941.25): cv.float_range(min=0, max=5000),       
