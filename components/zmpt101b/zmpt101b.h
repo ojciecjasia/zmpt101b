@@ -25,7 +25,7 @@ class ZMPT101B
 {
 public:
 	ZMPT101B (uint8_t pin_, uint16_t frequency_ = DEFAULT_FREQUENCY, float sensitivity_ = DEFAULT_SENSITIVITY);
-	float 	 getRmsVoltage(uint8_t loopCount = 1);
+	float 	 getRmsVoltage(uint8_t loopCount = 1000);
 
 private:
   uint8_t  pin;
